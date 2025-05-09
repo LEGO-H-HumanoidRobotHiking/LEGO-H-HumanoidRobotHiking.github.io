@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <meta name="description" content="Let’s Go Hiking - Learning to Traverse Complex Trails with Humanoid Robots">
+  <meta name="description" content="Let Humanoids Hike! Integrative Skill Development on Complex Trails">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Let Humanoid Robots Go Hiking! Integrative Skill Development over Complex Trails</title>
+  <title>Let Humanoids Hike! Integrative Skill Development on Complex Trails</title>
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
         rel="stylesheet">
@@ -19,17 +19,17 @@
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
-  <meta property="og:site_name" content="Let Humanoid Robots Go Hiking!\\
-Integrative Skill Development over Complex Trails" />
-  <meta property="og:title" content="Let Humanoid Robots Go Hiking! \\
-Integrative Skill Development over Complex Trails" />
+  <meta property="og:site_name" content="Let Humanoids Hike!\\
+Integrative Skill Development on Complex Trails" />
+  <meta property="og:title" content="Let Humanoids Hike! \\
+Integrative Skill Development on Complex Trails" />
   <meta property="og:image:width" content="1280" />
   <meta property="og:image:height" content="720" />
 
   <meta property="article:publisher" content="" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="LLet Humanoid Robots Go Hiking!\\
-Integrative Skill Development over Complex Trails" />
+  <meta name="twitter:title" content="LLet Humanoids Hike!\\
+Integrative Skill Development on Complex Trails" />
 </head>
 
 
@@ -93,10 +93,10 @@ Integrative Skill Development over Complex Trails" />
     <div class="hero-body">
       <div class="container has-text-centered">
         <h1 class="title is-1 publication-title is-size-1-mobile" style="font-size: 8rem;">
-          Let Humanoid Robots Go Hiking!
+          Let Humanoids Hike!
         </h1>
         <h1 class="subtitle is-1 publication-title is-size-4-mobile" style="font-size: 4rem;">
-          <br> Integrative Skill Development over Complex Trails
+          <br> Integrative Skill Development on Complex Trails
         </h1>
         <span class="author-block" style="font-size: 2rem;">
           <a href="https://kwanyeelin.github.io/">Kwan-Yee Lin</a>&nbsp;&nbsp;
@@ -192,14 +192,82 @@ Integrative Skill Development over Complex Trails" />
       </div>
     </div>
   </div>
+<div class="column is-centered has-text-centered">
+  <video id="myVideo" autoplay muted playsinline loop controls
+    src="./resources/teaservideo.mp4"
+    poster="./resources/loading-icon.gif"
+    style="width: 50%; border: 1px solid #bbb; border-radius: 10px; margin: 1%;">
+  </video>
+</div>
+
+<script>
+  // Wait for a user interaction to unmute and replay video with sound
+  window.addEventListener('click', () => {
+    const video = document.getElementById('myVideo');
+    if (video.muted) {
+      video.muted = false;
+      video.play(); // ensure it continues playing with sound
+    }
+  }, { once: true }); // run this only once
+</script>
 </section>
-<h2 class="title is-2" style="text-align: center;">Abstract</h2>
+<h2 class="title is-2" style="text-align: center;">Why Humanoid Robots Need to <span style="color: rgb(109, 142, 135); font-weight: bold;"> Hike </span>？</h2>
 <section class="section">
   <div class="container" style="width:50%;">
 
     <p style="text-align: justify;">
 
-      Despite significant progress in humanoid robotics, research remains fragmented: low-level motor skill learning often disregards the influence of long-horizontal goals on current movement and lacks situational awareness. While, high-level navigation struggles to accommodate real-world constraints and adapt to the irregularity of local terrains, falling short in last-step feasibility. To bridge these gaps, we present <span style="color: rgb(109, 142, 135); font-weight: bold;"> LEGO-H </span>, a universal learning framework that trains humanoid robots to become veteran hikers on complex trails by developing and integrating skills across all levels, embracing physical embodiment through both visual perceptual awareness and body dynamics. At the heart of LEGO-H's designs is the harmonization of robots' visual perception, decision-making, and motor skill execution. Our key innovations include: (1) TC-ViTs, a Temporal Vision Transformer variant tailored into the Hierarchical Reinforcement Learning (HRL) framework, framing local navigation as a sequential hallucination task that softly guides locomotion policy learning. This design seamlessly grafts locomotion and goal navigation into a unified, end-to-end policy learning framework. (2) Hierarchical Loss Metric Set for Policy Distillation. LEGO-H leverages privileged learning to ensure motor skill versatility while tackling the domain shift between teacher and student stages. To achieve this, we utilize Variational Autoencoder (VAE) latent representations and masked reconstructions to capture kinematic dependencies inherent in humanoid joint structures. This design optimizes policy training and robust skill transfer with task-agnostic hierarchical loss functions that reflect the rationality of the structural relationship between the humanoid's joint actions. Based on these two techniques, LEGO-H can address challenges from both the physical constraints of humanoid robots and dynamic environments across various time scales, without relying on biased motion priors. Extensive experiments on diverse simulated hiking trials demonstrate LEGO-H’s robustness and versatility. We hope LEGO-H could serve as a baseline prototype for humanoid robots in this underexplored hiking domain.
+      Hiking, challenges humans to master diverse motor skills and adapt to complex, and unpredictable terrain -- such as steep slopes, wide ditches, tangled roots, and sudden elevation changes. It demands continuous balance, agility, and real-time decision-making, making it an ideal testbed for advancing humanoid autonomy and the integration of vision, planning, and motor control. Hiking-capable robots could explore remote areas, assist in rescue missions, and guide individuals along rugged paths.
+    </p>
+  </div>
+</section>
+
+<h2 class="title is-2" style="text-align: center;">The Chanllenges for Humanoid Robot Hiking</h2>
+<section class="section">
+  <div class="container" style="width:50%;">
+
+
+    <p style="text-align: justify;">
+
+
+
+        <div class="container" style="width:85%;">
+    <div class="columns is-centered">
+      <img src="./resources/key-aspects-hiking.png" ></img>
+    </div>
+    <p>
+  <!--     <b>Hiking Requires Three Keys.</b>  -->
+    </p>
+  </div>
+        Hiking poses challenges beyond traditional navigation, blind locomotion, or single motor pattern learning:
+
+      <p><b>(1) Locomotion versatility</b>. Hiking trails span a vast range of terrains, such as dirt, rocks, stairs, and streams, often coexisting on a single trail. Such complexity and dangerousness of environments demand that robots go beyond blind locomotion and basic skills like walking and running. They must autonomously adapt to environmental variations with dynamic skills like jumping and leaping while maintaining balance on mixed surfaces.</p>
+      <p><b>(2) Body awareness</b>. Hiking introduces a local planning problem beyond traditional goal navigation -- real-time adjustments to navigate local obstacles, terrain changes, and body states. This requires seamless coordination between visual perception and motor control,  enabling the robots to adaptively plan feasible foot placements and movements to immediate environmental or body state changes, as they progress through the trail.</p>
+      <p><b>(3) Perceptual awareness</b>. Navigating complex 3D trails requires robots to sense and react to diverse obstacles, like stepping over logs or navigating around trees. Robots must leverage perceptual awareness from onboard sensors to dynamically select context-appropriate and agile actions, ensuring safe trail traversal.
+    </p>
+  </div>
+
+  </section>
+
+
+
+<h2 class="title is-2" style="text-align: center;">Project Abstract</h2>
+<section class="section">
+  <div class="container" style="width:50%;">
+
+    <p style="text-align: justify;">
+
+
+        <div class="container" style="width:95%;">
+    <div class="columns is-centered">
+      <img src="./resources/teaser.png" ></img>
+    </div>
+        <p>
+  <!--     <b>Hiking Requires Three Keys.</b>  -->
+    </p>
+       </div>
+
+      Despite significant progress in humanoid robotics, research remains fragmented: low-level motor skill learning often disregards the influence of long-horizontal goals on current movement and lacks situational awareness. While, high-level navigation struggles to accommodate real-world constraints and adapt to the irregularity of local terrains, falling short in last-step feasibility. To bridge these gaps, we propse <span style="color: rgb(109, 142, 135); font-weight: bold;"> training humanoid robots to hike. </span> We also present <span style="color: rgb(109, 142, 135); font-weight: bold;"> LEGO-H </span>, a universal learning framework that trains humanoid robots to become veteran hikers on complex trails by developing and integrating skills across all levels, embracing physical embodiment through both visual perceptual awareness and body dynamics. At the heart of LEGO-H's designs is the harmonization of robots' visual perception, decision-making, and motor skill execution. Our key innovations include: (1) TC-ViT, a Temporal Vision Transformer variant tailored into the Hierarchical Reinforcement Learning (HRL) framework, framing local navigation as a sequential hallucination task that softly guides locomotion policy learning. This design seamlessly grafts locomotion and goal navigation into a unified, end-to-end policy learning framework. (2) Hierarchical Latent Matching Loss Metric for Policy Distillation. LEGO-H leverages privileged learning to ensure motor skill versatility while tackling the domain shift between teacher and student stages. To achieve this, we utilize Variational Autoencoder (VAE) latent representations and masked reconstructions to capture kinematic dependencies inherent in humanoid joint structures. This design optimizes policy training and robust skill transfer with task-agnostic hierarchical loss functions that reflect the rationality of the structural relationship between the humanoid's joint actions. Based on these two techniques, LEGO-H can address challenges from both the physical constraints of humanoid robots and dynamic environments across various time scales, without relying on biased motion priors. Extensive experiments on diverse simulated hiking trials demonstrate LEGO-H’s robustness and versatility. We hope LEGO-H could serve as a baseline prototype for humanoid robots in this underexplored hiking domain.
     </p>
   </div>
 </section>
@@ -224,18 +292,18 @@ Integrative Skill Development over Complex Trails" />
     </p>
   </div>
 </section>
-<h2 class="title is-3" style="text-align: center;">What's TC-ViTs?</h2>
+<h2 class="title is-3" style="text-align: center;">What's TC-ViT?</h2>
 <section class="section">
   <div class="container" style="width:35%;">
     <div class="columns is-centered">
       <img src="./resources/TC-ViTs.png" ></img>
     </div>
     <p>
-      <b>TC-ViTs' Details.</b> Three key components: (a) a goal-orientated temporal transformer encoder for robots cognizing surroundings with the final goal; (b) a dual process on the current depth frame for integrating spatially precise information to reflect the current state; (c) a recurrent goal adaptation mechanism that integrates visual awareness, goal information, and proprioception.
+      <b>TC-ViT' Details.</b> Three key components: (a) a goal-orientated temporal transformer encoder for robots cognizing surroundings with the final goal; (b) a dual process on the current depth frame for integrating spatially precise information to reflect the current state; (c) a recurrent goal adaptation mechanism that integrates visual awareness, goal information, and proprioception.
     </p>
   </div>
 </section>
-<h2 class="title is-3" style="text-align: center;">What's Hierarchical Loss Metric Set?</h2>
+<h2 class="title is-3" style="text-align: center;">What's Hierarchical Latent Matching Loss Metric?</h2>
 <section class="section">
   <div class="container" style="width:35%;">
     <div class="columns is-centered">
